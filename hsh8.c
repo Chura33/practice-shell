@@ -25,8 +25,6 @@ int main(void)
 	while (1)
 	{
 		char *cmd = NULL;
-
-		printf("$ ");
 		if (_getline(&cmd, &n, stdin) == NULL)
 		{
 			free(cmd);
