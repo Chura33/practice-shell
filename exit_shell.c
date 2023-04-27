@@ -11,7 +11,6 @@ void exit_shell(char *args[])
 {
 	int exit_status = 0;
 
-	printf("%s  %s", args[0], args[1]);
 	if (args[1] != NULL)
 	{
 		exit_status = atoi(args[1]);
