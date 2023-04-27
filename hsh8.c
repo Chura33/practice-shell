@@ -16,6 +16,7 @@ int main(void)
 	int nargs = 0;
 	char *tok;
 	pid_t pid;
+	int interactive = isatty(STDIN_FILENO);
 
 	while (pathtok != NULL && npaths < MAX_PATHS)
 	{
@@ -25,8 +26,11 @@ int main(void)
 	while (1)
 	{
 		char *cmd = NULL;
+		if(interactive)
+		{
 		printf("hsh ");
 		fflush(stdout);
+		}
 		if (_getline(&cmd, &n, stdin) == NULL)
 		{
 			free(cmd);
