@@ -25,6 +25,8 @@ int main(void)
 	while (1)
 	{
 		char *cmd = NULL;
+		printf("hsh ");
+		fflush(stdout);
 		if (_getline(&cmd, &n, stdin) == NULL)
 		{
 			free(cmd);
